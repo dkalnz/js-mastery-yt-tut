@@ -5,7 +5,7 @@ const API_URL = 'http://www.omdbapi.com?apikey=15b1dca3';
 //--------------------
 
 //App Object
-const App = () => {
+function App() {
 	//-----Fetch-----
 	const searchMovies = async (title) => {
 		const response = await fetch(`${API_URL}&s=${title}`);
@@ -19,10 +19,12 @@ const App = () => {
 	}, []);
 
 	//-----RETURN-----
-	return () => {
-		<h1>App</h1>;
-	};
-};
+	return (
+		<>
+			<h1>App</h1>
+		</>
+	);
+}
 
 //-----export-----
 export default App;
